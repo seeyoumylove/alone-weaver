@@ -6,6 +6,10 @@
     <artifactId>alone-weaver</artifactId>
     <version>1.0</version>
     <name>alone-weaver</name>
+    <modules>
+        <module>weaver-business</module>
+        <module>weaver-common</module>
+    </modules>
     <packaging>pom</packaging>
     <description>alone-weaver</description>
 
@@ -14,11 +18,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.6.13</spring-boot.version>
-        <commons-io.version>2.7</commons-io.version>
         <redisson-starter.version>3.25.0</redisson-starter.version>
+        <!--文件上传-->
+        <aws-java-sdk-s3.version>1.12.261</aws-java-sdk-s3.version>
+        <fastdfs-client.version>1.27.2</fastdfs-client.version>
+        <!--commons包的版本号-->
+        <commons-io.version>2.7</commons-io.version>
+        <commons-configuration.version>1.10</commons-configuration.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-configuration2.version>2.7</commons-configuration2.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <velocity.version>1.7</velocity.version>
+        <!--Mybatis-->
+        <mybatis-plus-boot-starter.version>3.5.4.1</mybatis-plus-boot-starter.version>
     </properties>
-
-
 
     <dependencies>
         <dependency>
@@ -77,10 +90,45 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
         <!--commons的lang包-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${commons-beanutils.version}</version>
+        </dependency>
+
+        <!-- mybatis-plus start -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+
+        <!--文件上传的相关依赖-->
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>${fastdfs-client.version}</version>
         </dependency>
 
     </dependencies>

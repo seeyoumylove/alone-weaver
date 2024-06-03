@@ -11,7 +11,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>weaver-redis-boot-starter</module>
+        <module>weaver-redis-spring-boot-starter</module>
         <module>weaver-common-core</module>
+        <module>weaver-file-spring-boot-starter</module>
+        <module>weaver-elasticsearch-spring-boot-starter</module>
+        <module>weaver-sms-spring-boot-starter</module>
     </modules>
 </project>

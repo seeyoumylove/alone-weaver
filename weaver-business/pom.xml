@@ -5,30 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.weaver</groupId>
-        <artifactId>weaver-common</artifactId>
+        <artifactId>alone-weaver</artifactId>
         <version>1.0</version>
     </parent>
+    <packaging>pom</packaging>
+    <name>weaver-business</name>
+    <artifactId>weaver-business</artifactId>
 
-    <artifactId>weaver-common-core</artifactId>
-    <version>1.0</version>
-    <name>weaver-common-core</name>
-    <packaging>jar</packaging>
-    <description>公共服务核心</description>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
-        </dependency>
-
-        <!--aop切面-->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-        </dependency>
-    </dependencies>
-
+    <modules>
+        <!-- 代码生成器 -->
+        <module>weaver-code-generator</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
